@@ -15,7 +15,7 @@
 
 5. Add Prometheus as a Data Source in Grafana:
    - Accessed Grafana at http://localhost:3001
-   - Added Prometheus (http://prometheus:9090) as a data source
+   - Added Prometheus at http://prometheus:9090 as a data source
 
 6. Add Prometheus as a Data Source in Grafana:
    - Created dashboard in Grafana to visualize metrics 
