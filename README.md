@@ -1,49 +1,21 @@
-Getting Started:
+## Monitoring and Visibility 
 
-Start the server by running the following command in your terminal, "node server.js"
+1. Dockerfile:
+   - Created a Dockerfile to containerize the Node.js application
 
+2. Docker Compose:
+   - Configured services for the Node.js app, Prometheus, and Grafana
+   - Set up networking and volumes for containerized services
 
-API Endpoints:
+3. Build and Run Containers:
+   - Built and ran the Docker containers using docker-compose up -d
 
-The Calculator Microservice offers several arithmetic operations. Use the following endpoints to perform calculations:
+4. Prometheus Configuration:
+   - Created prometheus.yml to configure Prometheus to scrape metrics
 
-Addition (/add):
-- Description: Adds two numbers.
-- Usage: /add?num1=1&num2=2
-- Expected result: Result: 3
+5. Add Prometheus as a Data Source in Grafana:
+   - Accessed Grafana at http://localhost:3001
+   - Added Prometheus (http://prometheus:9090) as a data source
 
-Subtraction (/subtract):
-- Description: Subtracts one number from another.
-- Usage: /subtract?num1=5&num2=2
-- Expected result: Result: 3
-
-Multiplication (/multiply):
-- Description: Multiplies two numbers.
-- Usage: /multiply?num1=3&num2=4
-- Expected result: Result: 12
-
-Division (/divide):
-- Description: Divides one number by another.
-- Usage: /divide?num1=8&num2=2
-- Note: Division by zero will return an error.
-- Expected result: Result: 4
-
-Exponentiation (/power)
-- Description: Raises one number to the power of another.
-- Usage: /power?num1=2&num2=3
-- Expected Result: Result: 8
-
-Square Root (/sqrt)
-- Description: Calculates the square root of a number.
-- Usage: /sqrt?num1=16
-- Note: Negative numbers will return an error.
-- Expected Result: Result: 4
-
-Modulo (/modulo)
-- Description: Finds the remainder of division between two numbers.
-- Usage: /modulo?num1=10&num2=4
-- Expected Result: Result: 2
-
-Error Handling:
-
-Providing non-numeric inputs, attempting division by zero, or requesting the square root of a negative number will return an error message with a status of 400, guiding users towards valid inputs.
+6. Add Prometheus as a Data Source in Grafana:
+   - Created dashboard in Grafana to visualize metrics 
